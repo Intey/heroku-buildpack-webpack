@@ -9,6 +9,7 @@ source $bp_dir/lib/common.sh
 
 export_env_dir $env_dir
 cd $build_dir
-
+head "Installing dev dependencies. Hope you properly set them."
+npm i --only=dev
 head "Building webpack bundle"
 $(npm bin)/webpack --profile --display-modules
